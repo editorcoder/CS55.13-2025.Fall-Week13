@@ -1,14 +1,13 @@
 /*
 editorcoder
-2025-11-10
+2025-11-13
 SRJC CS55.13 Fall 2025
-Week 12: Assignment 12: Basic Headless CMS-Powered App 
+Week 13: Assignment 13: Custom SQL in Headless CMS-Powered App
 index.js
 */
 
 import Head from "next/head"; // Import Next.js Head component
 import Link from "next/link"; // Import Next.js Link component
-import Date from "../components/date"; // Import custom date formatting component
 import Layout, { siteTitle } from "../components/layout"; // Import shared Layout component and site title
 import utilStyles from "../styles/utils.module.css"; // Import CSS module with utility styles
 import styles from "./index.module.css"; // Import CSS module for index page styles
@@ -38,10 +37,6 @@ export default function Home({ allPostsData }) { // Export the Home page compone
               <div className={styles.postListItem}>
                 <div className={styles.postContent}>
                   <Link href={`/posts/${id}`}>{title}</Link>
-                  <br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
                 </div>
               </div>
             </li>
