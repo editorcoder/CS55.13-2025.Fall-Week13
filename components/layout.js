@@ -1,15 +1,14 @@
 /*
 editorcoder
-2025-11-10
+2025-11-15
 SRJC CS55.13 Fall 2025
-Week 3: Assignment 4: Next.js Basics 
+Week 13: Assignment 13: Custom SQL in Headless CMS-Powered App
 layout.js
 */
 
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "EditorCoder";
@@ -19,7 +18,7 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://dev-basic-headless-cms-app.pantheonsite.io/wp-content/uploads/2025/11/favicon-32x32-1.png" />
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
@@ -39,12 +38,12 @@ export default function Layout({ children, home }) {
             <Image
               priority
               src="https://dev-basic-headless-cms-app.pantheonsite.io/wp-content/uploads/2025/11/profile.jpg"
-              className={utilStyles.borderCircle}
+              className="profileImage"
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className="home">{name}</h1>
           </>
         ) : (
           <>
@@ -52,14 +51,14 @@ export default function Layout({ children, home }) {
               <Image
                 priority
                 src="https://dev-basic-headless-cms-app.pantheonsite.io/wp-content/uploads/2025/11/profile.jpg"
-                className={utilStyles.borderCircle}
+                className="profileImage"
                 height={108}
                 width={108}
                 alt='Home page'
               />
             </Link>
-            <h1 className={`${utilStyles.headingXl}`}>
-              <Link href="/" className={utilStyles.colorInherit}>
+            <h1 className="notHome">
+              <Link href="/" className="colorInherit">
                 {name}
               </Link>
             </h1>
@@ -69,7 +68,7 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">Back to home</Link>
+          <Link href="/">👈 Back to home</Link>
         </div>
       )}
     </div>

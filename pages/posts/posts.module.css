@@ -1,6 +1,6 @@
 /*
 editorcoder
-2025-11-13
+2025-11-15
 SRJC CS55.13 Fall 2025
 Week 13: Assignment 13: Custom SQL in Headless CMS-Powered App
 posts.module.css
@@ -14,22 +14,12 @@ posts.module.css
   overflow: scroll;
 }
 
-.postBody {
-  padding: 1.2rem;
-}
-
 .postTitle {
+  margin: 0;
   padding: 0.6rem 1.2rem;
   font-size: 2rem;
-  background-color: #2ac1b5;
+  background-color: var(--color-accent, #2ac1b5);
   border-radius: 1rem 1rem 0 0;
-}
-
-.postDate {
-  padding: 0.4rem 1.2rem;
-  border-bottom: solid grey 0.15rem;
-  font-size: 1rem;
-  font-style: italic;
 }
 
 .postImage {
@@ -49,4 +39,32 @@ posts.module.css
   .featuredImage {
     width: 50%;
   }
+}
+
+.postDate {
+  padding: 0.4rem 1.2rem;
+  border-bottom: solid grey 0.15rem;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.postDetails {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0.5rem 0;
+
+  h3 {
+    margin: 0;
+    text-decoration: underline;
+  }
+
+  & div {
+    margin: 0.1rem 1rem 0 1rem;
+    padding: 0;
+
+    p, ul {
+      margin: 0.5rem 0 0.7rem 0;
+    }
+  }
+
 }
