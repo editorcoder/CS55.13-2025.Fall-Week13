@@ -12,7 +12,7 @@ import styles from "./layout.module.css";
 import Link from "next/link";
 
 const name = "EditorCoder";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "EditorCoder";
 
 export default function Layout({ children, home }) {
   return (
@@ -21,7 +21,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="https://dev-basic-headless-cms-app.pantheonsite.io/wp-content/uploads/2025/11/favicon-32x32-1.png" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="EditorCoder's blog for the upcoming Cat Trading Card Game"
         />
         <meta
           property="og:image"
