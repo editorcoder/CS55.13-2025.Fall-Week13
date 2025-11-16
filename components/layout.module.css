@@ -35,3 +35,12 @@ layout.module.css
 .backToHome a {
   text-decoration: none;
 }
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  color: #666;
+  font-size: 0.875rem;
+}

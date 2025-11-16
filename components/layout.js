@@ -71,6 +71,9 @@ export default function Layout({ children, home }) {
           <Link href="/">👈 Back to home</Link>
         </div>
       )}
+      <footer className={styles.footer}>
+        <p>&copy; {new Date().getFullYear()} Reginald Rodriguez. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
